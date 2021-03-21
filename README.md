@@ -52,7 +52,7 @@ This script can be used for any election, currently we only use the two columns,
 
 ![variables](Resources/candidate-county_variables.png)
 
-Or you may have noticed the percentages don't exactly add up to 100% as they're only rounding the decimal to two places. You can get even more exact numbers by changing all the cases of formatting code where it says '.1f' to instead be '.2f'. I've included an example of one such place below:
+Or you may have noticed the percentages don't exactly add up to 100% as they're only rounding to one decimal place. You can get even more exact numbers by changing all the cases of formatting code where it says '.1f' to instead be '.2f'. I've included an example of one such place below:
 ```
         candidate_results = (
             f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
