@@ -49,9 +49,11 @@ The analysis of the election shows that:
 
 ### Additional Script Uses
 This script can be used for any election, currently we only use the two columns, County and Candidate. If you had additional columns you wanted to get similar data on you could revise the candidate_name and/or county_name variables to look at different columns by changing the number in the square brackets of the below code. For example changing 'row[2]' to 'row[3]' would get the code to look at whatever data you'd added to the fourth column of your csv:
+
 ![variables](Resources/candidate-county_variables.png)
 
-Or you may have noticed the percentages don't exactly add up to 100% as they're only rounding the decimal to two places. You can get even more exact numbers by changing all the cases of the below code to instead be '.3f'
+Or you may have noticed the percentages don't exactly add up to 100% as they're only rounding the decimal to two places. You can get even more exact numbers by changing all the cases of formatting code where it says '.1f' to instead be '.2f'. I've included an example of one such place below:
 ```
-.2f
+        candidate_results = (
+            f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
 ```
